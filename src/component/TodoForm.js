@@ -5,14 +5,8 @@ import { useState } from 'react'
 
 function TodoForm(props) { // this is props and it should be read only in this function
     const [input, setInput] = useState('hello world');
-
-    // const [todos, setTodos] = useState([]);
     const onChanges = e => {
         e.preventDefault();
-        // setTodos(todos => {
-        //     [input, ...todos]
-        // })
-        // console.log(e)
         props.onsubmit({
             id: Math.floor(Math.random() * 1000),
             text: props.edit ? props.forRenderEditValue : input
@@ -51,7 +45,7 @@ function TodoForm(props) { // this is props and it should be read only in this f
         </form>
     )
 }
-
+// the below lines are only for practice
 TodoForm.defaultProps = {
     titel: "this is navbar",
     titleNumber: 34,
